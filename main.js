@@ -1,7 +1,13 @@
 let h1 = document.querySelector('h1'),
     ul = document.querySelector('ul'),
     button = document.querySelector('button');
-onload=()=>{(navigator.onLine)?online():offline()}
+onload=()=>{
+        if(navigator.onLine){
+            online()
+        }else{
+            offline()
+        }
+    }
 ononline = ()=> online()
 onoffline = ()=> offline()
 function online(){                                       
